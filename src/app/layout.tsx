@@ -24,9 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#FAF8F5] text-stone-800 min-h-screen`}
+        suppressHydrationWarning
       >
         {children}
         <Toaster position="top-center" toastOptions={{ className: 'bg-white border-stone-200 text-stone-800 rounded-2xl shadow-xl' }} />
